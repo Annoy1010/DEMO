@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "MainLayout";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Assets/style.css">
+    <!-- <link rel="stylesheet" href="./assets/main.js"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Space+Mono&display=swap" rel="stylesheet">
+    <title>Calculator app</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="container__heading">SPLI<br>TTER</h1>
+        <div class="app">
+            <div class="app-options">
+                <div class="options-quantity">
+                    <h3 class="options-title">Bill</h3>
+                    <input type="number" class="options-quantity__count" placeholder="0" min="0">
+                </div>
+                <div class="options-select__tips">
+                    <h3 class="options-title">Select Tips %</h3>
+                    <div class="options-select__discount">
+                        <button class="select__discount-btn">5%</button>
+                        <button class="select__discount-btn">10%</button>
+                        <button class="select__discount-btn">15%</button>
+                        <button class="select__discount-btn">25%</button>
+                        <button class="select__discount-btn">50%</button>
+                        <button class="select__discount-btn select-disabled">Custom</button>
+                    </div>
+                </div>
+                <div class="options-participants">
+                    <h3 class="options-title">Number Of People</h3>
+                    <input type="number" class="options-participants__count" placeholder="0" min="0" required>
+                </div>
+            </div>
+            <div class="app-bill">
+                <div class="bill-info">
+                    <div class="bill-tip">
+                        <div class="bill-content">
+                            <h4 class="tip-title">Tip Amount</h4>
+                            <h5>/ person</h5>
+                        </div>
+                        <span class="tip-money">$0.00</span>
+                    </div>
+                    <div class="bill-tip">
+                        <div class="bill-content">
+                            <h4 class="tip-title">Total</h4>
+                            <h5>/ person</h5>
+                        </div>
+                        <span class="total-money">$0.00</span>
+                    </div>
+                </div>
+                <button class="bill-reset-btn">RESET</button>
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+</body>
+</html>
+

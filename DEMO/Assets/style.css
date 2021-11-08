@@ -1,0 +1,239 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+body {
+    min-height: 100vh;
+    /* width: 100vw; */
+    background-color: #c5e4e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 636px;
+    width: 922px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container__heading {
+    height: 55px;
+    text-align: center;
+    color: #3d6666;
+    font-size: 24px;
+    letter-spacing: 12px;
+    font-weight: 600;
+}
+
+.app {
+    margin-top: 90px;
+    height: 489px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.app-options {
+    width: 434px;
+    padding: 20px;
+}
+
+.options-title {
+    color: #667e7f;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.options-quantity {
+    margin-bottom: 38px;
+}
+
+.options-select__tips {
+    margin-bottom: 24px;
+}
+
+.options-participants {
+    margin-bottom: 48px;
+}
+
+.options-quantity__count,
+.options-participants__count {
+    width: 100%;
+    border-radius: 5px;
+    height: 46px;
+    background-color: #f4fafa;
+    border: none;
+    padding: 0 18px;
+    text-align: right;
+    font-size: 24px;
+    font-weight: 600;
+    color: #00494d;
+}
+
+input::placeholder {
+    font-size: 22px;
+    font-weight: 600;
+    color: #9ebbbd;
+    float: right;
+    margin-top: 6px;
+}
+
+.options-quantity__count::-webkit-inner-spin-button,
+.options-quantity__count::-webkit-outer-spin-button,
+.options-participants__count::-webkit-inner-spin-button,
+.options-participants__count::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.options-select__discount {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.select__discount-btn {
+    width: 120px;
+    height: 50px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
+    background-color: #00494d;
+    cursor: pointer;
+}
+
+.select__discount-btn:focus {
+    background-color: #26c0ab;
+}
+
+.select__discount-btn:hover {
+    background-color: #9dd8d0;
+    color: #00494d;
+}
+
+.select-disabled,
+.select-disabled:hover{
+    background-color: #f4fafa;
+    color: #9ebbbd;
+}
+
+.select-disabled:focus {
+    background-color: #f4fafa;
+}
+
+
+/* BILL */
+.app-bill {
+    width: 396px;
+    background-color: #00494d;
+    border-radius: 15px;
+    padding: 44px 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bill-tip {
+    display: flex;
+    margin: 12px 0 44px;
+    justify-content: space-between;
+}
+
+.tip-title {
+    color: #fff;
+    font-size: 15px;
+}
+
+.bill-content h5 {
+    color: #7b9a9c;
+}
+
+.tip-money,
+.total-money {
+    color: #26c0ab;
+    font-size: 46px;
+    line-height: 46px;
+    font-weight: 600;
+}
+
+.bill-reset-btn {
+    width: 100%;
+    height: 46px;
+    font-size: 20px;
+    background-color: #0d726e;
+    color: #00494f;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bill-reset-btn:hover {
+    filter: brightness(1.15);
+}
+
+@media (max-width: 1023px) {
+    .container {
+        width: 100%;
+    }
+
+    .app {
+        height: 870px;
+        flex-direction: column;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .app-options {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .app-options,
+    .app-bill {
+        width: 100%;
+    }
+
+    .app-options {
+        padding-top: 0;
+    }
+
+    .select__discount-btn {
+        width: 49%;
+    }
+
+    .select-disabled {
+        text-align: right;
+        padding-right: 18px;
+    }
+
+
+    .app-bill {
+        height: 254px;
+        padding: 28px 24px 24px;
+    }
+
+    .bill-tip {
+        margin-bottom: 30px;
+    }
+
+    .tip-money {
+        font-size: 30px;
+    }
+
+    .total-money {
+        font-size: 30px;
+    }
+}
